@@ -35,7 +35,7 @@ header {
   color: #fff;
 }
 
-.accordian-title {
+.accordian_title {
   display: inline-block;
   margin: 50px 40px 50px 60px;
   font-weight: 300;
@@ -46,7 +46,7 @@ header {
   width: 67%;
 }
 
-.accordian-container {
+.accordian_container--title {
 }
 
 .tab_photo-container {
@@ -58,7 +58,7 @@ header {
   margin: 0.5rem;
 }
 
-.tab_text-container {
+.tab_contents--text {
   height: 20rem;
   width: 65%;
   background-image: url();
@@ -67,13 +67,13 @@ header {
   margin: 0.5rem;
 }
 
-.tab_contents-container {
+.tab_contents--container {
   display: flex;
   flex-direction: row;
   padding: 0;
 }
 
-.tabs {
+.accordian {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -85,25 +85,25 @@ header {
   width: 59.6rem;
 }
  
-.tabs label {
+.accordian label {
   -webkit-box-ordinal-group: 2;
   -webkit-order: 1;
   -ms-flex-order: 1;
   order: 1;
   display: block;
   padding: 1rem 2rem;
-  margin: 0.025rem;
+  margin: 0 0.05rem;
   cursor: pointer;
   background: #90CAF9;
   font-weight: bold;
   -webkit-transition: background ease 0.2s;
   transition: background ease 0.2s;
-  width: 10.8rem;
+  width: 10.76rem;
   border-bottom: 1px solid #000;
   border-top: none;
 }
  
-.tabs .tab {
+.accordian .tab {
   display: flex;
   flex-direction: row;
   -webkit-box-ordinal-group: 100;
@@ -123,16 +123,21 @@ header {
   border-left: 1px solid #000;
 }
  
-.tabs input[type="radio"] {
+.accordian input[type="radio"] {
   position: absolute;
   opacity: 0;
 }
  
-.tabs input[type="radio"]:checked + label { background: #fafafa; }
+.accordian input[type="radio"]:checked + label { 
+  background: #fafafa; 
+}
  
-.tabs input[type="radio"]:checked + label + .tab { display: block; }
+.accordian input[type="radio"]:checked + label + .tab { 
+  display: flex; 
+  flex-direction: column;
+}
 
-.tabs input[type="radio"]:checked + label { 
+.accordian input[type="radio"]:checked + label { 
   border-right: 1px solid #000; 
   border-left: 1px solid #000;
   border-top: 1px solid #000;
@@ -140,9 +145,91 @@ header {
   margin: none;
 }
 
+.grid_container {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 800px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 
+    (2fr, 1fr
+    1fr, 1fr, 1fr,
+    1fr,
+  );
+  grid-gap: 125px 25px;
+  grid-auto-rows: 100px;
+  grid-template-areas: 
+    "a a b"
+    "c d e"
+    "f g g";
+  align-items: start;
+  margin: 12rem 0;
+}
+
+.grid_box { 
+  margin: 10px;
+  width: 100%;
+  height: 200px;
+  border: 1px solid #000;
+}
+
+.grid_box--header {
+  height: 30px;
+  border: 1px solid #000;
+}
+
+.grid_box--1 {
+  grid-area: a;
+}
+
+.grid_box--2 {
+  grid-area: b;
+
+}
+
+.grid_box--3 {
+  grid-area: c;
+}
+
+.grid_box--4 {
+  grid-area: d;
+}
+
+.grid_box--5 {
+  grid-area: e;
+}
+
+.grid_box--6 {
+  grid-area: f;
+}
+
+.grid_box--7 {
+  grid-area: g;
+}
+
 @media screen and (max-width: 1010px) {
-  body {
-    background-color: blue;
+
+  .accordian {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 59.6rem;
+  }
+
+  .accordian .tab,
+  .accordian label{
+    order: initial;
+  }
+
+  .accordian label {
+    width: 100%;
   }
 }
 
