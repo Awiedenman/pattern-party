@@ -181,9 +181,15 @@ header h2 {
 }
 
 .view-code_button {
+  position: relative;
+  display: block;
   height: 3rem;
   margin: 4rem auto;
   width: 23rem;
+}
+
+.grid_container .view-code_button {
+  top: 5.5rem;
 }
 
 .grid_container {
@@ -209,7 +215,7 @@ header h2 {
     "c d e"
     "f g g";
   align-items: start;
-  margin: 12rem 0;
+  /* margin: 12rem 0; */
 }
 
 .grid_box { 
@@ -394,7 +400,7 @@ header h2 {
       "f f f"
       "g g g";
     /* align-items: start; */
-    margin: 12rem 0;
+    /* margin: 12rem 0; */
   }
 
   .grid_box {
