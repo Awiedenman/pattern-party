@@ -26,8 +26,8 @@ header h2 {
   width: 50%;
 }
 
-.header_title--pattrn {
-  display: inline-block;
+.header_title--pattern {
+  /* display: inline-block; */
   margin: 15px 20px 15px 60px;
   font-weight: 300;
   color: #fff;
@@ -39,7 +39,7 @@ header h2 {
 }
 
 .header_student-name {
-  display: inline-block;
+  /* display: inline-block; */
   position: absolute;
   margin: 20px 60px;
   right: 25px;
@@ -83,7 +83,7 @@ header h2 {
 .tab_contents--container {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 80%;
   padding: 0;
 }
 
@@ -116,7 +116,7 @@ header h2 {
   -ms-flex-wrap: wrap; */
   flex-wrap: wrap;
   margin: 0 auto;
-  width: 59.6rem;
+  width: 85%;
 }
  
 .accordian label {
@@ -200,7 +200,7 @@ header h2 {
   /* justify-content: center; */
   /* align-items: center; */
   max-width: 100%;
-  width: 950px;
+  width: 85%;
   margin: 2rem auto 3rem;
 }
 
@@ -275,25 +275,26 @@ header h2 {
 }
 
 .search_links--container.hidden {
-  /* padding: 1rem; */
+  padding: 1rem;
 }
 
 .search_textbox {
   position: absolute;
   right: 1rem;
-  top: 1.5rem;
+  top: 1.0rem;
   padding: 0.2rem 0.2rem 0.2rem 0.6rem;
   margin: 0 0.75rem;
   border: 1px solid #000;
   height: 50px;
   font-size: 15px;
+  width: 200px
 }
 
 .search_bar {
   position: relative;
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: 85%;
   margin:0 auto;
   background-color: #d1d2d3;
   padding: 0.75rem;
@@ -318,7 +319,8 @@ a {
 }
 
 a:hover {
-  font-size: 30px;
+  font-weight: 600;
+  /* padding: 0 */
 }
 
 .view-code_button {
@@ -346,6 +348,15 @@ a:hover {
     width: 100vw;
   }
 
+  .header_student-name {
+    /* display: inline-block; */
+    position: absolute;
+    margin: 20px 60px;
+    right: 25px;
+    font-weight: 600;
+    color: #fff;
+  }
+
   .accordian_container {
     display: flex;
     justify-content: space-around;
@@ -360,7 +371,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     padding: 0;
-    width: 40rem;
+    width: 50rem;
   }
 
   .seperation_title--container {
@@ -390,7 +401,7 @@ a:hover {
 
   .tab_contents--image {
     width: 100%;
-    background-color: #34D1D1;
+    /* background-color: #34D1D1; */
   }
 
   .tab_contents--container {
@@ -423,6 +434,7 @@ a:hover {
 
   .grid_container {
     margin-top: 2rem;
+    width: 950px;
   }
 
   .grid {
@@ -435,7 +447,7 @@ a:hover {
 
   .grid_box {
     margin: 0.8rem auto;
-    width: 40.6rem;
+    width: 50rem;
     height: 270px;
     border: 1px solid #000;
   }
@@ -481,6 +493,8 @@ a:hover {
   .search_bar {
     flex-direction: column; 
     background-color: #fff;
+    width: 50rem;
+    padding: 0.75rem 0;
   }
 
   .search_container {
@@ -521,6 +535,40 @@ a:hover {
     /* left: 30rem; */
     margin: 0;
     /* background-color: #d1d2d3; */
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .accordian {
+    width: 90%;
+  }
+  .search_bar {
+    width: 90%;
+  }
+
+  .grid_box { 
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  header {
+    flex-direction: column;
+  }
+
+  .header_title--pattern {
+    /* width: 40PX; */
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding: 1rem;
+  }
+
+  .header_student-name {
+    position: unset;
+    margin: 0 auto;
+    padding: 0.75rem 0;
+    border-top: 1px solid #000;
   }
 }
 
