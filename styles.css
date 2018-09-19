@@ -171,17 +171,33 @@ header h2 {
   border-bottom: 1px solid #fafafa;
   margin: 0;
 }
-
+.view-code_button a:hover {
+  background-color: none;
+  color: #FFF;
+}
 .view-code_button {
   position: relative;
   display: block;
   height: 3rem;
   margin: 4rem auto;
   width: 23rem;
+  color: #fff;
   background-color: #3f3244;
-  color: #f2f2f2;
+}
+
+.view-code_link {
+  color: #fff;
   text-transform: uppercase;
 }
+
+.view-code_link:hover {
+  color: #fff;
+  background-color: #3f3244;
+  text-transform: uppercase;
+  font-weight: 300;
+  padding: 0
+}
+
 
 .grid_container {
   max-width: 100%;
