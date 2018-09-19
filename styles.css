@@ -598,6 +598,10 @@ a:hover {
 }
 
 @media screen and (max-width: 429px) {
+  .header_title--pattern {
+    width: 16rem;
+  }
+
   .grid_container .view-code_button {
     top: 3.5rem;
     margin: 0 0 3rem;
@@ -607,3 +611,4 @@ a:hover {
   .view-code_button { 
     width : 100%}
 }
+
